@@ -12,7 +12,7 @@ RUN apt-get update \
         libgconf-2-4 "chromium=90.*" \
   && rm -rf /var/lib/apt/lists/*
 
-ADD docs/requirements-doc.txt requirements.txt /
+ADD requirements-doc.txt requirements.txt /
 
 RUN pip3 --no-cache-dir install -r /requirements.txt \
   && pip3 --no-cache-dir install -r /requirements-doc.txt
